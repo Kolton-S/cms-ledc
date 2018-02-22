@@ -10,7 +10,7 @@
      $username = trim($_POST['username']); //trim removes the 'whitespace' aka spaces at the start or end of the username; might be there if copy/pasted in
      $password = trim($_POST['password']);
      if ($username !== "" && $password !== ""){
-         $result = logIn($username, $password, $ip);
+         $result = logIn($username, $password, $localtime,  $ip);
          $message = $result;
       }else{
        $message = "Please fill in the required fields";
@@ -33,7 +33,7 @@
     <lable>Username:</lable>
     <input type="text" name="username" value="">
     <br>
-    <lable>Password</lable>
+    <lable>Password:</lable>
     <input type="text" name="password" value="">
     <br>
     <input type="submit" name="submit" value="Show me the money">

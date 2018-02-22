@@ -1,12 +1,11 @@
 $(document).ready(function() {
-
+  var content = document.querySelector("#contentChange");
   var d = new Date();
     var n = d.getHours();
     if (n > 19 || n < 6)
-      $("#contentChange").innerHTML = "Night night! Sleep tight!";
+      content.innerHTML = "It's dark outside, make sure you have your flashlight.";
     else if (n > 16 && n < 19)
-      $("#contentChange").innerHTML = "The sun is setting! Get inside!";
+      content.innerHTML = "The sun is setting, get inside.";
     else
-      $("#contentChange").innerHTML = "Have a great day! You deserve it.";
-
+      content.innerHTML = "Have a great day, you deserve it.";
 });

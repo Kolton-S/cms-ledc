@@ -1,6 +1,6 @@
 <?php
 
-   function logIn($username, $password, $localtime, $ip){
+   function register($username, $email, $fname, $ip){
      require_once('connect.php');
      $username = mysqli_real_escape_string($link, $username);// mysqli_real_escape_string to stop sql injections
      $password = mysqli_real_escape_string($link, $password);
@@ -10,13 +10,13 @@
        $found_user = mysqli_fetch_array($user_set, MYSQLI_ASSOC);
        $attempt = $found_user['attempts'];
        $id = $found_user['user_id'];
+       $ll = $found_user['last_login'];
        $_SESSION['user_id'] = $id; // sessions can't be saved or cashed, deleted on page close. Temp file.
        $_SESSION['user_name'] = $found_user['user_fname'];
+       $_SESSION['last_login'] = $ll;
        $_SESSION['attempts'] = $attempt;
-       $_SESSION['last_login'] = $found_user['last_login'];
-       date_default_timezone_set("America/Toronto");
-       $timeset = date('d-m-Y h:i:s A');
-       $current_time = "UPDATE tbl_user SET last_login = '{$timeset}' WHERE user_id = '{$id}'";
+       $last_login = "CURRENT_TIMESTAMP";
+       $current_time = "UPDATE tbl_user SET last_login = CURRENT_TIMESTAMP WHERE user_id = '{$id}'";
        if ($attempt >= 3) {
           $message = 'Sorry your account has been lock out. Please contact the administrator';
           return $message;
