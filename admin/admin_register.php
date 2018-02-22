@@ -1,19 +1,18 @@
 <?php
-   //ini_set('display_errors',1);
-   //error_reporting(E_ALL);
+   ini_set('display_errors',1);
+   error_reporting(E_ALL);
 
    require_once('phpscripts/config.php');
 	confirm_logged_in();
 	if(isset($_POST['submit'])) {
 		$fname = trim($_POST['fname']);
 		$username = trim($_POST['username']);
-		$password = trim($_POST['password']);
 		$email = trim($_POST['email']);
 		$userlvl = $_POST['userlvl'];
 		if(empty($userlvl)){
 			$message = "Please select a user level.";
 		}else{
-			$result = register($fname, $username, $password, $email, $userlvl);
+			$result = register($fname, $username, $email, $userlvl);
 			$message = $result;
 		}
 	}
@@ -37,13 +36,15 @@
 	<input type="text" name="username" value="	<?php if(!empty($username)){echo $username;} ?>
 "><br><br>
 
-	<label>Password:</label>
-	<input type="text" name="password" value="	<?php if(!empty($password)){echo $password;} ?>
-"><br><br>
+
 
 	<label>Email:</label>
 	<input type="text" name="email" value="	<?php if(!empty($email)){echo $email;} ?>
 "><br><br>
+
+<label>Password:</label>
+<h5>Password Auto Generated</h5>
+<br><br>
 
 	<label>User Level:</label>
 	<select name="userlvl">

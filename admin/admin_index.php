@@ -23,6 +23,7 @@
   <?php if(!empty($regmessage)){echo $regmessage;}?>
   <a href="admin_register.php"><button class="buttonStyle">Register New User</button></a>
   <a href="admin_edituser.php"><button class="buttonStyle">Edit User</button></a>
+  <a href="admin_deleteuser.php"><button class="buttonStyle">Delete User</button></a>
   <a href="phpscripts/caller.php?caller_id=logout"><button class="buttonStyle">Sign Out</button></a>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

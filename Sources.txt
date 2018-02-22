@@ -1,1 +1,2 @@
+https://stackoverflow.com/questions/5438760/generate-random-5-characters-string
 https://stackoverflow.com/questions/24812820/how-to-update-last-login-time-php-sql
