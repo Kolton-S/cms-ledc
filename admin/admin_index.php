@@ -4,7 +4,15 @@
 
    require_once('phpscripts/config.php');
    confirm_logged_in();
-
+   $id = $_SESSION['user_id'];
+   // echo $id;
+   $tbl = "tbl_user";
+   $col = "user_id";
+   $popForm = getSingle($tbl, $col, $id);
+   $found_user = mysqli_fetch_array($popForm, MYSQLI_ASSOC);
+   if($found_user['needs_edit'] == 1){
+     redirect_to("admin_edituser.php");
+   }
 ?>
 <!doctype html>
 <html>
@@ -16,6 +24,7 @@
   <h1>Welcome Company Name to your admin page</h1>
   <?php echo "<h2>Hi - {$_SESSION['user_name']}</h2>"; ?>
   <?php echo "<h2>Last Login - {$_SESSION['last_login']}</h2>"; ?>
+  <?php echo $milliseconds = round(microtime(true) * 1000); ?>
   <h4 id="contentChange">.</h4>
   <?php if(!empty($fail_message)){echo $fail_message;}?>
   <?php if(!empty($message)){echo $message;}?>

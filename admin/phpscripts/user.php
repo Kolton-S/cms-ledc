@@ -4,11 +4,16 @@ function register($fname, $username, $email, $userlvl) {
  $ranPass = $rand = substr(md5(microtime()),rand(0,26),10);
  date_default_timezone_set("America/Toronto");
  $timeset = date('d-m-Y h:i:s A');
- echo $timeset;
- $userString = "INSERT INTO tbl_user VALUES(NULL,'{$fname}', '{$username}', '{$ranPass}', '{$email}', '{$timeset}', '{$userlvl}', 'no', NULL, '0')";
+ $userString = "INSERT INTO tbl_user VALUES(NULL,'{$fname}', '{$username}', '{$ranPass}', '{$email}', '{$timeset}', '{$userlvl}', 'no', '0', '0', '1')";
  //echo $userString;
  $userQuery = mysqli_query($link, $userString);
  if($userQuery) {
+   $to = $email;
+   $subject = "Thank You For Registering!";
+   $txt = "Hello! Thank's for registering in our CMS. `\n\n` Your current username is: `{$username}` `\n\n` Your current password is: `{$ranPass}` `\n\n` To log into your account please use: http://linktowebsite.com/admin/admin_login.php";
+   $headers = "From: webmaster@linktowebsite.com";
+
+   mail($to,$subject,$txt,$headers);
    redirect_to("admin_index.php");
  }else{
    $message = "There was a problem setting up this user.  Maybe reconsider your hiring practices.";
@@ -19,7 +24,7 @@ function register($fname, $username, $email, $userlvl) {
 
 function editUser($id, $fname, $username, $password, $email) {
 		include('connect.php');
-		$updateString = "UPDATE tbl_user SET user_name = '{$username}', user_fname = '{$fname}', user_pass = '{$password}', user_email = '{$email}' WHERE user_id = '{$id}'";
+		$updateString = "UPDATE tbl_user SET user_name = '{$username}', user_fname = '{$fname}', user_pass = '{$password}', user_email = '{$email}', needs_edit = '0' WHERE user_id = '{$id}'";
 		//echo $userString;
 		$updateQuery = mysqli_query($link, $updateString);
 		if($updateQuery) {
