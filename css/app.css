@@ -1,0 +1,1048 @@
+/* Set a background color */
+
+@import url('http://allfont.net/allfont.css?fonts=agency-fb');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
+
+p {
+	text-align: center;
+	font-family: 'Agency FB';
+}
+
+.center{
+	position: relative;
+transform: translate(0px, -50%);
+top: 50%;
+}
+
+/*Menu*/
+nav li{
+	margin-top: 30px;
+}
+
+.menu-icon.dark
+{
+	z-index: 10;
+}
+
+.navButton {
+	-webkit-transform: skew(37deg);
+	-moz-transform: skew(37deg);
+	-o-transform: skew(37deg);
+	background-color: #fff;
+	width: 100px;
+}
+
+.navButton a {
+	-webkit-transform: skew(-37deg);
+	-moz-transform: skew(-37deg);
+	-o-transform: skew(-37deg);
+	font-size: 25px;
+	font-family: 'Agency FB';
+}
+/*Menu End*/
+
+/*Splash Page*/
+.title-bar {
+	background: transparent;
+}
+
+header p {
+	color: white;
+}
+
+#mainHeader {
+	/*background: url(../images/morphing-diamonds.svg);*/
+	background-repeat: repeat;
+}
+
+#background {
+	background-color: #333;
+}
+
+#iLove {
+	float: right;
+}
+
+#line1 {
+	font-size: 37px;
+	font-weight: bold;
+	font: 'Agency FB';
+}
+
+#line2 {
+	margin-top: -55px;
+	font-size: 60px;
+	font-weight: bold;
+	font: 'Agency FB';
+	border-bottom: 2px solid #fff;
+	margin-bottom: 45px;
+}
+
+/*icons on nav*/
+
+#largeNav img {
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 35px;
+}
+
+#jobs {
+	width: 76px;
+	height: 63px;
+}
+
+#entertainment {
+	width: 68px;
+	height: 68px;
+}
+
+#family {
+	width: 80px;
+	height: 63px;
+}
+
+.info {
+	background-color: white;
+}
+
+.info p {
+	color: black;
+	font-size: 16px;
+	font: 'Rajdhani';
+	margin-top: 12px;
+}
+
+
+/*Random Box*/
+
+#randomBox {
+	background-color: #b7b7b7;
+	padding: 8px;
+	height: 176px;
+}
+
+.randomButton {
+	-webkit-transform: skew(37deg);
+	-moz-transform: skew(37deg);
+	-o-transform: skew(37deg);
+	background-color: grey;
+}
+
+.randomButton p {
+	-webkit-transform: skew(-37deg);
+	-moz-transform: skew(-37deg);
+	-o-transform: skew(-37deg);
+	font-size: 25px;
+	font: 'Rajdhani';
+}
+
+.randomInfo {
+	background-color: white;
+	height: 97px;
+	margin: 0 auto;
+	display: block;
+}
+
+.down {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.downArrow {
+	text-align: center;
+}
+
+#arrow {
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+
+/*end of header*/
+
+
+/*Video Page*/
+
+#video {
+	position: relative;
+}
+
+#controls {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 5px;
+	opacity: 0;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	-ms-transition: opacity .3s;
+	transition: opacity .3s;
+	background-color: #fff;
+}
+
+.slider {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+#video:hover #controls {
+	opacity: .9;
+}
+/*end of Video*/
+
+
+/*Tech Jobs*/
+.header {
+	background: url(../images/mob-tech-banner.jpg);
+	background-repeat: no-repeat;
+	height: 190px;
+	background-size: contain;
+}
+
+.header h1 {
+	font-size: 42px;
+	font-family: 'Agency FB';
+	border-bottom: 2px solid #fff;
+	text-align: center;
+	color: white;
+	padding-top: 40px;
+	margin-bottom: 70px;
+}
+
+.jobImg
+{
+	display: block;
+	margin: 0 auto;
+}
+
+.jobLogo
+{
+	padding-top: 10px;
+	padding-bottom: 5px;
+	display: block;
+	margin: 0 auto;
+	width: 140px;
+}
+
+.jobText
+{
+
+	margin: 12px 10px 25px 10px;
+	font-size: 18px;
+	font-family: 'Rajdhani';
+	font-weight: 400;
+	font-style:normal;
+}
+
+
+/*End of Tech Jobs*/
+
+
+/*Family Housing*/
+
+#housing
+{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#housing h1 {
+	font-size: 42px;
+	;
+	font: 'Agency FB';
+	border-bottom: 2px solid #fff;
+	text-align: center;
+	color: white;
+	margin-top: 57px;
+}
+
+#housing p {
+	margin-bottom: 46px;
+	margin-top: 12px;
+	color: white;
+	font-size: 16px;
+	font: 'Rajdhani';
+	text-align: center;
+}
+
+#neighborhood p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood2 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood3 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood4 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood5 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood6 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood7 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+#neighborhood8 p {
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+
+/*End of housing*/
+
+
+/*Entertainment Section*/
+
+.entButton {
+	-webkit-transform: skew(-37deg);
+	-moz-transform: skew(-37deg);
+	-o-transform: skew(-37deg);
+	background-color: #333333;
+	width: 125px;
+	height: 26px;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 23px;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.entIconCont {
+	text-align: center;
+}
+
+.entIcons {
+	height: 62px;
+	margin-bottom: 4px;
+}
+
+.entButton p {
+	color: #fff;
+	-webkit-transform: skew(37deg);
+	-moz-transform: skew(37deg);
+	-o-transform: skew(37deg);
+}
+
+#entertainmentSec h1 {
+	font-size: 42px;
+	;
+	font-family: 'Agency FB', arial;
+	text-transform: uppercase;
+	border-bottom: 2px solid #000;
+	text-align: center;
+	color: black;
+	margin-top: 57px;
+	margin-bottom: 25px;
+}
+
+
+/* End of Entertaintment Section */
+
+
+/* Entertainment Gallery */
+
+.gallDot {
+	cursor: pointer;
+	height: 7px;
+	width: 7px;
+	margin: 0 2px 30px 2px;
+	background-color: #cccccc;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+#entGallery {
+	margin: 0;
+}
+
+#entGallery div {
+	padding: 0;
+}
+
+#entGalleryDesk {
+	margin: 0;
+}
+
+#entGalleryDesk div {
+	padding: 0;
+}
+
+.center-dots {
+	bottom: -25px;
+	text-align: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.orbit-image img {
+	width: 100%
+}
+
+.center-dots p {
+	font-size: 30px;
+	;
+	font-family: 'Agency FB', arial;
+	text-transform: uppercase;
+	border-bottom: 2px solid #fff;
+	text-align: center;
+	color: white
+}
+
+#entTitle {
+	font-size: 48px;
+	;
+	font-family: 'Agency FB', arial;
+	text-transform: uppercase;
+	border-bottom: 2px solid #000;
+	text-align: center;
+	color: black;
+}
+
+.orbit-figure {
+	position: relative;
+	margin: 0;
+}
+
+.galleryBg {
+	background-color: #141414;
+}
+
+.galleryBg p {
+	color: white;
+	font-family: 'Rajdhani', sans-serif;
+	line-height: normal;
+	padding: 15px 15px 0 15px;
+}
+
+.entDesk h1 {
+	margin-top: 25px;
+}
+
+.active,
+.gallDot:hover {
+	background-color: #fff;
+}
+
+.overlay {
+	position: relative;
+}
+
+.orbit-full-width {
+	width: 100%;
+	height: auto;
+}
+
+
+/* End of Entertainment Gallery */
+
+
+/*Start of contact*/
+
+#contact {
+	background: url(../images/contact_bg_mobile.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	position: relative;
+	height: 100vh;
+	background-size: cover;
+}
+
+#contact h1 {
+
+	font-size: 31px;
+	font-family: 'Agency FB';
+	border-bottom: 2px solid #fff;
+	text-align: center;
+	color: white;
+	top: 50vh;
+}
+
+#contact p {
+	margin-bottom: 5px;
+	color: white;
+	font-size: 18px;
+	line-height: 18px;
+	font-family: 'Rajdhani';
+	text-align: center;
+	top: 50vh;
+}
+
+.social
+{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+#socialMediaLarge
+{
+	display: none;
+}
+
+.social li{
+  display: inline;
+  margin-left: 20px;
+}
+
+.social img {
+    width: 2.5em;
+    height: 2.5em;
+		margin-top: 10px;
+}
+
+.social li:first-child{
+    margin-left: 0px;
+}
+
+input{
+	width: 125px;
+	margin: 0 auto;
+	display: block;
+}
+
+::-webkit-input-placeholder {
+	text-align: center;
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	text-align: center;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	text-align: center;
+}
+
+:-ms-input-placeholder {
+	text-align: center;
+}
+/*End of contact*/
+@media screen and (min-width: 350px) {
+
+.header {
+	height: 210px;
+}
+}
+
+
+/*Resize Screens*/
+@media screen and (min-width: 360px) {
+	/*Nav*/
+	nav li:first-child{
+		margin-top: 50%;
+	}
+
+	 nav li{
+		 margin-top: 30px;
+	 }
+ /*end Nav*/
+
+	/*Start of contact*/
+	#contact h1 {
+		font-size: 40px;
+		margin-bottom: 20px;
+	}
+
+	#contact p {
+		margin-bottom: 15px;
+		font-size: 22px;
+		line-height: 18px;
+	}
+
+	.social img {
+	    width: 2.7em;
+	    height: 2.7em;
+			margin-top: 20px;
+	}
+
+	input{
+		width: 135px;
+	}
+}
+
+@media screen and (min-width: 375px) {
+ /*Nav*/
+	nav li{
+		margin-top: 30px;
+	}
+/*end Nav*/
+.header {
+	height: 220px;
+}
+
+	/*Start of contact*/
+	.form{
+		margin-top: 15px;
+	}
+
+	#contact h1 {
+		font-size: 45px;
+		margin-bottom: 20px;
+	}
+
+	#contact p {
+		margin-bottom: 15px;
+		font-size: 22px;
+		line-height: 18px;
+	}
+
+	.social img {
+			width: 2.9em;
+			height: 2.9em;
+			margin-top: 30px;
+	}
+
+	input{
+		width: 155px;
+	}
+}
+
+@media screen and (min-width: 420px) {
+	#line1 {
+		font-size: 50px;
+	}
+	#line2 {
+		font-size: 70px;
+		margin-top: -55px;
+	}
+	.randomButton {
+		margin: 0 auto;
+		width: 230px;
+	}
+	.entButton {
+		margin: 0 auto;
+	}
+	#entGalleryDesk {
+		display: none;
+	}
+
+	/*Start of Jobs*/
+	.header h1
+	{
+		padding-top: 5px;
+	}
+
+	.jobText
+	{
+		margin: 12px 50px 25px 50px;
+	}
+
+	.header {
+			background: url(../images/tab-tech-banner.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 160px;
+	}
+	/*End of jobs*/
+
+	/*Start of contact*/
+	.form{
+		margin-top: 15px;
+	}
+
+	#contact h1 {
+		font-size: 40px;
+		margin-top: 40px;
+	}
+
+	#contact p {
+		margin-bottom: 10px;
+		margin-top: 15px;
+		font-size: 22px;
+		line-height: 22px;
+	}
+
+	.social img {
+	    width: 2.7em;
+	    height: 2.7em;
+			margin-top: 20px;
+	}
+
+}
+
+@media screen and (min-width: 540px) {
+	.header h1
+	{
+		font-size: 50px;
+		padding-top: 15px;
+	}
+
+	.header {
+			background: url(../images/tab-tech-banner.jpg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 190px;
+	}
+
+}
+
+@media screen and (min-width: 640px) {
+	#line1 {
+		font-size: 60px;
+	}
+	#entGalleryDesk {
+		display: none;
+	}
+	#line2 {
+		font-size: 90px;
+		margin-top: -75px;
+	}
+	#randomBox {
+		padding: 21px;
+		height: 90px;
+	}
+	.randomButton {
+		margin-top: 5px;
+	}
+	.randomInfo {
+		height: 40px;
+		margin-top: 5px;
+	}
+	.randomInfo {
+		-webkit-transform: skew(37deg);
+		-moz-transform: skew(37deg);
+		-o-transform: skew(37deg);
+		background-color: white;
+	}
+	.randomnInfo p {
+		-webkit-transform: skew(-37deg);
+		-moz-transform: skew(-37deg);
+		-o-transform: skew(-37deg);
+		font-size: 10px;
+		font: 'Rajdhani';
+	}
+
+/*Start Tech Jobs*/
+.header h1 {
+	font-size: 50px;
+	padding-top: 0px;
+	margin-bottom: 10px;
+}
+
+.header{
+	background: url(../images/web_tech_banner.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 150px;
+}
+
+.jobLogo{
+	padding-top: 10px;
+}
+
+.jobText{
+	font-size: 16px;
+	margin: 12px 8px 25px 8px;
+}
+
+/*Start of Contact page*/
+	#socialMediaSmall
+	{
+		display: none;
+	}
+
+	#socialMediaLarge
+	{
+		display: block;
+	}
+
+	#contact {
+		background: url(../images/contact-tab.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+[type='email']{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+	.form{
+		margin-top: 30px;
+	}
+
+	#contact h1 {
+		font-size: 50px;
+	}
+
+	.social img {
+			width: 2.7em;
+			height: 2.7em;
+			margin-top: 10px;
+	}
+
+	#contact p{
+	font-size: 28px;
+	line-height: 25px;
+	margin-top: 60px;
+	}
+
+}
+
+@media screen and (min-width: 730px) {
+
+	.header h1 {
+		font-size: 60px;
+	}
+
+	#randomBox {
+		width: 660px;
+		margin: 0 auto;
+	}
+	#entGallery {
+		display: none;
+	}
+	#entertainmentSec {
+		display: none;
+	}
+	#entGalleryDesk {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.header{
+		height: 190px;
+	}
+
+}
+
+@media screen and (min-width: 1024px) {
+	#line1 {
+		font-size: 65px;
+	}
+	#line2 {
+		font-size: 105px;
+		margin-top: -85px;
+	}
+
+/*TECH JOB*/
+.header{
+	background: url(../images/xl_tech_banner.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 230px;
+}
+
+	.header h1 {
+		font-size: 70px;
+		font: 'Agency FB';
+		margin-top: 100px;
+		margin-bottom: 140px;
+	}
+
+	.rowjobs1{
+	padding-bottom: 100px;
+	}
+
+	.jobText {
+    margin: 12px 10px 5px 10px;
+    }
+
+	#field {
+		margin-top: 100px;
+	}
+	.entIcons {
+		height: 70px;
+		margin-bottom: 10px;
+		margin-left: 30px;
+		margin-top: 20px;
+	}
+	.entIconCont {
+		margin-top: 12px;
+	}
+	.orbit-title {
+		font-size: 25px;
+		top: 100px;
+		font-family: 'Agency FB', arial;
+		text-transform: uppercase;
+		border-bottom: 2px solid #fff;
+		text-align: center;
+		color: white;
+		position: absolute;
+		padding: 0 82px 0 82px;
+		margin-left: 30px;
+	}
+	.contentBox {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.8);
+		top: 180px;
+		margin-left: 30px;
+		width: 300px;
+	}
+	#entGallery {
+		display: none;
+	}
+	#entertainmentSec {
+		display: none;
+	}
+	.entButton {
+		width: 120px;
+		height: 25px;
+	}
+	.deskIconFix {
+		position: absolute;
+	}
+	.deskFix {
+		position: relative;
+	}
+
+/*Contact Page*/
+#contact {
+	background: url(../images/contact_bg.jpg);
+	background-size: contain;
+}
+
+	[type='email']{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	.form{
+		margin-top: 105px;
+	}
+
+	#contact h1 {
+		font-size: 60px;
+		padding-top: 20px;
+	}
+
+	#contact p {
+		margin-bottom: 10px;
+		margin-top: 120px;
+		font-size: 33px;
+		line-height: 35px;
+	}
+
+	.social img {
+			width: 3.4em;
+			height: 3.4em;
+			margin-top: 20px;
+	}
+
+	input{
+		width: 170px;
+	}
+
+ .uncentered{
+		position: relative;
+		transform: translate(0px, 0px);
+		top: 0;
+		}
+}
+
+@media screen and (min-width: 1185px) {
+	.header{
+		height: 270px;
+	}
+
+	.header h1{
+		padding-top: 30px;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.header{
+		height: 310px;
+	}
+
+	.header h1{
+	font-size: 90px;
+		}
+
+	#line1 {
+		font-size: 80px;
+	}
+	#line2 {
+		font-size: 125px;
+		margin-top: -90px;
+	}
+
+	#entGallery {
+		display: none;
+	}
+	#entertainmentSec {
+		display: none;
+	}
+	.entIcons {
+		height: 70px;
+		margin-bottom: 10px;
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+	.entIconCont {
+		margin-top: 12px;
+	}
+	.deskIconFix {
+		position: absolute;
+	}
+	.deskFix {
+		position: relative;
+	}
+	.entButton {
+		width: 120px;
+		height: 25px;
+	}
+	.orbit-title {
+		font-size: 25px;
+		top: 100px;
+		font-family: 'Agency FB', arial;
+		text-transform: uppercase;
+		border-bottom: 2px solid #fff;
+		text-align: center;
+		color: white;
+		position: absolute;
+	}
+	.contentBox {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.8);
+		top: 180px;
+		width: 125px;
+		margin-left: 30px;
+	}
+
+	/*Contact Page*/
+	#contact {
+		background: url(../images/contact_xl_bg.jpg);
+		background-size: contain;
+	}
+
+	#contact p {
+		margin-bottom: 10px;
+		margin-top: 120px;
+		font-size: 40px;
+		line-height: 45px;
+	}
+
+	.social img {
+			width: 4.3em;
+			height: 4.3em;
+			margin-top: 10px;
+	}
+
+}

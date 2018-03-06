@@ -1,0 +1,11 @@
+.showCMS{
+  display: block;
+}
+
+.hideCMS{
+  display: none;
+}
+
+#editJobs{
+  margin-top: 50px;
+}

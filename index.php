@@ -1,49 +1,40 @@
 <?php
    require_once('admin/phpscripts/config.php');
-   if(isset($_GET['filter'])){
-     $tbl = "tbl_movies";
- 		 $tbl2 = "tbl_genre";
- 	   $tbl3 = "tbl_mov_genre";
- 		 $col = "movies_id";
- 		 $col2 = "genre_id";
- 		 $col3 = "genre_name";
-     $filter = $_GET['filter'];
-     $getMovies = filterType($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter);
-   }else{
-     $tbl = "tbl_movies";
-     $getMovies = getAll($tbl);
-   }
-
-
-
+     $tbl = "tbl_jobs";
+     $getJobs = getAll($tbl);
 ?>
 
 <!doctype html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to the Finest Selection of Blu-rays on the internets!</title>
+<title>LEDC - Jobs</title>
+<link rel="stylesheet" href="css/foundation.css">
+<link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+  <section id="jobBus" class="fullpage-wrapper row">
+     <div class="full">
+    <h2 class="hide">Job Opportunities></h2>
+    <div class="pulse1 slide rowjobs1">
   <?php
-    include('includes/nav.html');
-
     // ! means not, so not a string.
-    if(!is_string($getMovies)){
-      while($row = mysqli_fetch_array($getMovies)){
-        echo "<img src=\"images/{$row['movies_cover']}\" alt=\"{$row['movies_title']}\">
-        <h2>{$row['movies_title']}</h2>
-        <p>{$row['movies_year']}</p>
-        <a href=\"details.php?id={$row['movies_id']}\">More Details</a>
-        <br><br>
-        "; // \ makes the " not count as a close to the string the img tag is in
+    if(!is_string($getJobs)){
+      while($row = mysqli_fetch_array($getJobs)){
+        echo "<div class=\"small-12 medium-4 large-4 columns\"><img src=\"images/{$row['logo_src']}\" class=\"jobLogo\" alt=\"{$row['company']}\">
+        <img src=\"images/{$row['img_src']}\" class=\"jobImg\" alt=\"{$row['company']}\">
+        <p class=\"jobText\">{$row['description']}</p>
+        <a href=\"{$row['link']}\">Visit Company</a></div>
 
+        "; // \ makes the " not count as a close to the string the img tag is in
       }
     }else{
-        echo "<p class=\"error\">{$getMovies}</p>";
+        echo "<p class=\"error\">{$getJobs}</p>";
     }
 
-    include('includes/footer.html');
   ?>
+</div>
+</div>
+</section>
 </body>
 </html>
