@@ -18,23 +18,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal Login</title>
+<title>LEDC - Portal Home</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <h1>Welcome Company Name to your admin page</h1>
-  <?php echo "<h2>Hi - {$_SESSION['user_name']}</h2>"; ?>
-  <?php echo "<h2>Last Login - {$_SESSION['last_login']}</h2>"; ?>
-  <?php echo $milliseconds = round(microtime(true) * 1000); ?>
-  <h4 id="contentChange">.</h4>
+  <?php include('templates/navigation.php'); ?>
   <?php if(!empty($fail_message)){echo $fail_message;}?>
   <?php if(!empty($message)){echo $message;}?>
   <?php if(!empty($mysqlQueryResponse)){echo $mysqlQueryResponse;}?>
   <?php if(!empty($regmessage)){echo $regmessage;}?>
+  <section id="menuSelection">
   <a href="admin_register.php"><button class="buttonStyle">Register New User</button></a>
   <a href="admin_edituser.php"><button class="buttonStyle">Edit User</button></a>
   <a href="admin_deleteuser.php"><button class="buttonStyle">Delete User</button></a>
   <a href="admin_content.php"><button class="buttonStyle">Page Contents</button></a>
-  <a href="phpscripts/caller.php?caller_id=logout"><button class="buttonStyle">Sign Out</button></a>
+
+</section>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/timeupdate.js"></script>

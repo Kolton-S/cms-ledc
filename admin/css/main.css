@@ -1,3 +1,6 @@
+@import url('http://allfont.net/allfont.css?fonts=agency-fb');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+
 .showCMS{
   display: block;
 }
@@ -8,4 +11,178 @@
 
 #editJobs{
   margin-top: 50px;
+}
+
+#loginForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+}
+
+#login{
+  background-color: rgba(62,62,62,.6);
+  color: white;
+  border-radius: 5px;
+  padding: 50px 30px 50px 30px;
+}
+
+#loginButtonCon{
+  -webkit-transform: skew(37deg);
+  -moz-transform: skew(37deg);
+  -o-transform: skew(37deg);
+  background-color: white;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 150px;
+  position: relative;
+  color: #00c6ff;
+  display: block;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    #015F3D 50%,
+    #015F3D
+  );
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
+}
+
+#loginButtonCon:hover{
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+#errorMessages{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #730000;
+  padding: 15px 0 15px 0;
+  font-family: 'Agency FB';
+  margin: -8px;
+}
+
+#loginButton{
+  -webkit-transform: skew(-37deg);
+  -moz-transform: skew(-37deg);
+  -o-transform: skew(-37deg);
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  position: absolute;
+}
+
+#loginButton:hover{
+  cursor: pointer;
+}
+
+#backgroundImageLogin{
+  background-image: url('../images/morphing-diamonds.png');
+  background-repeat: repeat;
+}
+
+#loginText{
+  color: black;
+  -webkit-transform: skew(-37deg);
+  -moz-transform: skew(-37deg);
+  -o-transform: skew(-37deg);
+  text-align: center;
+  padding-left: 60px;
+  z-index: 500;
+  top: -6px;
+  font-family: 'Agency FB';
+  position: absolute;
+}
+
+#password{
+  -webkit-text-security: disc !important;
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Agency FB", Times, serif;
+  color: rgba(0,0,0,1);
+  width: 150px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#username{
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 16px/normal "Agency FB", Times, serif;
+  color: rgba(0,0,0,1);
+  width: 150px;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+#mainNav{
+  background-color: #333333;
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+
+#mainNav ul li{
+  list-style-type: none;
+  text-decoration: none;
+  float: left;
+  margin-top: 1%;
+  margin-left: 4%;
+}
+
+#menuSelection{
+  clear: both;
+}
+
+.buttonStyle{
+  background-color: #BBBBBB;
+  border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buttonStyle:hover{
+  background-color: #9C9B9B;
+  color: white;
+  cursor: pointer;
+}
+
+#homeButton{
+  margin-top: 5px !important;
+}
+
+#logoutButton{
+  margin-top: 5px !important;
 }

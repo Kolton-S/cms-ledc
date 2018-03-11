@@ -1,7 +1,7 @@
 <?php
 	// Set up connection credentials
 	$user = "root";
-	$pass = "";
+	$pass = "root";
 	$url = "localhost";
 	$db = "db_ledc";
 

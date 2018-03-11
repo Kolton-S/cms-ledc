@@ -22,21 +22,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>CMS Portal Login</title>
+<title>LEDC - Portal Login</title>
+<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <h1>Welcome Company Name</h1>
-  <?php if(!empty($fail_message)){echo $fail_message;}?>
-  <?php if(!empty($message)){echo $message;}?>
-  <form action="admin_login.php" method="post">
-    <lable>Username:</lable>
-    <input type="text" name="username" value="">
+<body id="backgroundImageLogin">
+    <?php if(!empty($fail_message)){echo "<div id='errorMessages'>${fail_message}</div>";}?>
+    <?php if(!empty($message)){echo "<div id='errorMessages'>${message}</div>";}?><br>
+  <section id="loginForm">
+  <form action="admin_login.php" id="login" method="post">
+    <input type="text" name="username" id="username" value="" placeholder="Username" title="Your Username">
     <br>
-    <lable>Password:</lable>
-    <input type="text" name="password" value="">
+    <input type="password" name="password" id="password" value="" placeholder="Password" title="Your Password">
     <br>
-    <input type="submit" name="submit" value="Show me the money">
+    <div id="loginButtonCon">
+      <p id="loginText">Login</p>
+      <input type="submit" name="submit" id="loginButton" value="">
+    </div>
   </form>
+</section>
 </body>
+<script src="js/loginFunction.js"></script>
 </html>

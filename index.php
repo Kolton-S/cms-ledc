@@ -23,9 +23,8 @@
       while($row = mysqli_fetch_array($getJobs)){
         echo "<div class=\"small-12 medium-4 large-4 columns\"><img src=\"images/{$row['logo_src']}\" class=\"jobLogo\" alt=\"{$row['company']}\">
         <img src=\"images/{$row['img_src']}\" class=\"jobImg\" alt=\"{$row['company']}\">
-        <p class=\"jobText\">{$row['description']}</p>
-        <a href=\"{$row['link']}\">Visit Company</a></div>
-
+        <p class=\"jobText\">{$row['description']}<br>
+        <a href=\"{$row['link']}\">{$row['link']}</a></div></p>
         "; // \ makes the " not count as a close to the string the img tag is in
       }
     }else{

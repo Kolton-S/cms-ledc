@@ -14,7 +14,7 @@
 	$popForm = getSingle($tbl, $col, $idSet);
 	$found_content = mysqli_fetch_array($popForm, MYSQLI_ASSOC);
 
-	if(isset($_POST['submit'])) {
+	if(isset($_POST['submitEdit'])) {
 		$company = trim($_POST['company']);
 		$logo = trim($_POST['logo']);
 		$image = trim($_POST['image']);
@@ -23,6 +23,16 @@
 			$result = edit_job($idSet, $company, $logo, $image, $description, $linka);
 			$message = $result;
 		}
+
+		if(isset($_POST['submitAdd'])) {
+			$company = trim($_POST['company']);
+			$logo = trim($_POST['logo']);
+			$image = trim($_POST['image']);
+			$description = trim($_POST['description']);
+			$linka = trim($_POST['link']);
+				$result = add_job($idSet, $company, $logo, $image, $description, $linka);
+				$message = $result;
+			}
 ?>
 <!doctype html>
 <html>
@@ -48,7 +58,7 @@
       echo "{$row['id']} {$row['company']} <a href=\"phpscripts/caller.php?caller_id=editJS&id={$row['id']}\">Edit Job</a><br>";
     }
   ?>
-	<?php if(!empty($message)){echo $message;} echo $idSet; ?>
+	<?php if(!empty($message)){echo $message;}?>
 	<form action="admin_content.php" method="post" >
 	<label>Company Name:</label>
 	<input type="text" name="company" value="	<?php echo $found_content['company']; ?>
@@ -70,7 +80,29 @@
 <input type="text" name="link" value="	<?php echo $found_content['link']; ?>
 "><br><br>
 
-	<input type="submit" name="submit" value="Edit Job">
+	<input type="submit" name="submitEdit" value="Edit Job">
+	</form>
+	</section>
+
+	<section id="addJob">
+	<?php if(!empty($message)){echo $message;}?>
+	<form action="admin_content.php" method="post" >
+	<label>Company Name:</label>
+	<input type="text" name="company"><br><br>
+
+	<label>Logo Name (with extension):</label>
+	<input type="text" name="logo"><br><br>
+
+	<label>Main Image Name (with extension):</label>
+	<input type="text" name="image"><br><br>
+
+	<label>Description:</label>
+	<input type="text" name="description"><br><br>
+
+	<label>Link:</label>
+	<input type="text" name="link"><br><br>
+
+	<input type="submit" name="submitAdd" value="Add Job">
 	</form>
 	</section>
 
