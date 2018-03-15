@@ -186,3 +186,11 @@
 #logoutButton{
   margin-top: 5px !important;
 }
+
+.tab{
+  display: none;
+}
+
+.tab.active{
+  display: block;
+}

@@ -15,23 +15,27 @@
 	$found_content = mysqli_fetch_array($popForm, MYSQLI_ASSOC);
 
 	if(isset($_POST['submitEdit'])) {
-		$company = trim($_POST['company']);
-		$logo = trim($_POST['logo']);
-		$image = trim($_POST['image']);
-		$description = trim($_POST['description']);
-		$linka = trim($_POST['link']);
-			$result = edit_job($idSet, $company, $logo, $image, $description, $linka);
-			$message = $result;
+		$companyEdit = trim($_POST['companyEdit']);
+		$logoEdit = $_FILES['logoEdit'];
+		$imageEdit = $_FILES['imageEdit'];
+		$descriptionEdit = trim($_POST['descriptionEdit']);
+		$linkaEdit = trim($_POST['linkEdit']);
+		if (!empty($logoEdit) && !empty($imageEdit)){
+			$result = edit_job($idSetEdit, $companyEdit, $logoEdit, $imageEdit, $descriptionEdit, $linkaEdit);
+			$messageEdit = $result;
+		}
 		}
 
 		if(isset($_POST['submitAdd'])) {
 			$company = trim($_POST['company']);
-			$logo = trim($_POST['logo']);
-			$image = trim($_POST['image']);
+			$logo = $_FILES['logo'];
+			$image = $_FILES['image'];
 			$description = trim($_POST['description']);
 			$linka = trim($_POST['link']);
+			if (!empty($logo) && !empty($image)){
 				$result = add_job($idSet, $company, $logo, $image, $description, $linka);
 				$message = $result;
+			}
 			}
 ?>
 <!doctype html>
@@ -39,11 +43,17 @@
 <head>
 <meta charset="UTF-8">
 <title>CMS Portal</title>
+<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<h1>LEDC Edit Content Page</h1>
-	<section id="delJobs">
+	<?php include("templates/navigation.php"); ?>
+	<div id="tabGroup">
+		<a href="#delJobs">Delete Jobs</a>
+		<a href="#editJobs">Edit Jobs</a>
+		<a href="#addJob">Add Job</a>
+	</div>
+	<section id="delJobs" class="tab">
 
   <?php
     while ($row = mysqli_fetch_array($delJobs)){
@@ -51,50 +61,50 @@
     }
   ?>
 	</section>
-	<section id="editJobs">
+	<section id="editJobs" class="tab active">
 
   <?php
     while ($row = mysqli_fetch_array($editJobs)){
       echo "{$row['id']} {$row['company']} <a href=\"phpscripts/caller.php?caller_id=editJS&id={$row['id']}\">Edit Job</a><br>";
     }
   ?>
-	<?php if(!empty($message)){echo $message;}?>
+	<?php if(!empty($messageEdit)){echo $messageEdit;}?>
 	<form action="admin_content.php" method="post" >
 	<label>Company Name:</label>
-	<input type="text" name="company" value="	<?php echo $found_content['company']; ?>
+	<input type="text" name="companyEdit" value="	<?php echo $found_content['company']; ?>
 "><br><br>
 
 	<label>Logo Name:</label>
-	<input type="text" name="logo" value="	<?php echo $found_content['logo_src']; ?>
+	<input type="file" name="logoEdit" value="	<?php echo $found_content['logo_src']; ?>
 "><br><br>
 
 	<label>Main Image Name:</label>
-	<input type="text" name="image" value="	<?php echo $found_content['img_src']; ?>
+	<input type="file" name="imageEdit" value="	<?php echo $found_content['img_src']; ?>
 "><br><br>
 
 	<label>Description:</label>
-	<input type="text" name="description" value="	<?php echo $found_content['description']; ?>
+	<input type="text" name="descriptionEdit" value="	<?php echo $found_content['description']; ?>
 "><br><br>
 
 <label>Link:</label>
-<input type="text" name="link" value="	<?php echo $found_content['link']; ?>
+<input type="text" name="linkEdit" value="	<?php echo $found_content['link']; ?>
 "><br><br>
 
 	<input type="submit" name="submitEdit" value="Edit Job">
 	</form>
 	</section>
 
-	<section id="addJob">
+	<section id="addJob" class="tab">
 	<?php if(!empty($message)){echo $message;}?>
 	<form action="admin_content.php" method="post" >
 	<label>Company Name:</label>
 	<input type="text" name="company"><br><br>
 
-	<label>Logo Name (with extension):</label>
-	<input type="text" name="logo"><br><br>
+	<label>Logo Name:</label>
+	<input type="file" name="logo_src" value=""><br><br>
 
-	<label>Main Image Name (with extension):</label>
-	<input type="text" name="image"><br><br>
+	<label>Main Image Name:</label>
+	<input type="file" name="img_src" value=""><br><br>
 
 	<label>Description:</label>
 	<input type="text" name="description"><br><br>
@@ -107,5 +117,5 @@
 	</section>
 
 </body>
-<!-- <script src="js/reveal.js"></script> -->
+<script src="js/reveal.js"></script>
 </html>
