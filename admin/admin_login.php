@@ -17,30 +17,29 @@
      }
    }
 
-?>
+   ?>
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>LEDC - Portal Login</title>
-<link rel="stylesheet" href="css/main.css">
-</head>
-
-<body id="backgroundImageLogin">
-    <?php if(!empty($fail_message)){echo "<div id='errorMessages'>${fail_message}</div>";}?>
-    <?php if(!empty($message)){echo "<div id='errorMessages'>${message}</div>";}?><br>
-  <section id="loginForm">
-  <form action="admin_login.php" id="login" method="post">
-    <input type="text" name="username" id="username" value="" placeholder="Username" title="Your Username">
-    <br>
-    <input type="password" name="password" id="password" value="" placeholder="Password" title="Your Password">
-    <br>
-    <div id="loginButtonCon">
-      <p id="loginText">Login</p>
-      <input type="submit" name="submit" id="loginButton" value="">
-    </div>
-  </form>
-</section>
-</body>
-<script src="js/loginFunction.js"></script>
+   <head>
+      <meta charset="UTF-8">
+      <title>LEDC - Portal Login</title>
+      <link rel="stylesheet" href="css/main.css">
+   </head>
+   <body id="backgroundImageLogin">
+      <?php if(!empty($fail_message)){echo "<div id='errorMessages'>${fail_message}</div>";}?>
+      <?php if(!empty($message)){echo "<div id='errorMessages'>${message}</div>";}?><br>
+      <section id="loginForm">
+         <form action="admin_login.php" id="login" method="post">
+            <input type="text" name="username" id="username" value="" placeholder="Username" title="Your Username">
+            <br>
+            <input type="password" name="password" id="password" value="" placeholder="Password" title="Your Password">
+            <br>
+            <div id="loginButtonCon">
+               <p id="loginText">Login</p>
+               <input type="submit" name="submit" id="loginButton" value="">
+            </div>
+         </form>
+      </section>
+   </body>
+   <script src="js/loginFunction.js"></script>
 </html>
